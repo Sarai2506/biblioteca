@@ -23,5 +23,6 @@ $titulo="Editar prestamo";
     $lector=$resultado->fetch_assoc();
     //echo $lector;
     include "vistas/frmPrestamo.php";
+    //OTRO COMENTARIO
   }
   ?>
