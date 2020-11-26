@@ -29,5 +29,6 @@ $titulo="Editar lector";
     $lector=$resultado->fetch_assoc();
     //echo $lector;
     include "vistas/frmLector.php";
+    //UN COMENTARIO
   }
   ?>
