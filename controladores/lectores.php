@@ -54,4 +54,13 @@ function obtieneLector($curp)
   //echo $sql;
   return $resultado;
 }
+
+function buscaLector($patron)
+{
+  $mysqli = conexionBD ();
+  $sql = "SELECT * FROM lectores WHERE UCASE(nombre) = UCASE('".$patron."') OR UCASE(apellido_paterno) = UCASE('".$patron."') OR UCASE(apellido_materno) = UCASE('".$patron."')";
+  $resultado = mysqli_query ($mysqli, $sql);
+  //echo $sql;
+  return $resultado;
+}
 ?>

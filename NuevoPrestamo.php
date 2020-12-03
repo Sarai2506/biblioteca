@@ -16,8 +16,11 @@ if(isset($_POST['curp'])){
       echo "<h1> Verifica los datos, no se registro el prestamo</h1>";
     }
 
-}
-  else {
+} elseif (isset($_POST['buscalector'])) {
+  include "controladores/lectores.php";
+  $lectores = buscaLector($_POST['buscalector']);
+  include "vistas/frmPrestamo.php";
+}else {
   include "vistas/frmPrestamo.php";
 }
 ?>
