@@ -20,7 +20,7 @@
          $lectores->data_seek(0);
          while ($fila = $lectores->fetch_assoc()) {
            echo "<li><p>".$fila['nombre'] . " " .$fila['apellido_paterno']." ".$fila['apellido_materno'].
-           " <button type='button' name='asignar' onclick='alert("."'Hola'".");'>Seleccionar</button></p>"." </li>";
+           " <button type='button' name='asignar' onclick='document.frmPrestamo.curp.value=\"".$fila['curp']."\";'>Seleccionar</button></p>"." </li>";
 
          }
        }
